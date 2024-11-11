@@ -44,8 +44,8 @@ ms_marco_minilm = client.collections.get("Deep_search_Damac")
 
 @retry(wait=wait_fixed(0.35), stop=stop_after_attempt(30))
 def get_content_url(m_id, a_id):
-  print('getting the url')
-  try:
+    print('getting the url')
+    try:
         fir_r=requests.get(
             "https://damacacademy.damacgroup.com/api/learntron/generateApiKey/DamacGroup/LearnTron2015"
         )
